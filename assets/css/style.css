@@ -21,7 +21,9 @@ h1{
 
 .styleContainer{
     position: relative;
-    margin-top: 130px;
+    margin-top: 180px;
+    margin-left: 210px;
+    margin-bottom: 50px;
 }
 
 .footer{

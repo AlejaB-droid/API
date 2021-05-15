@@ -21,7 +21,7 @@ const getData = (api) =>{
 const dibujarData = (data) =>{
     let html = "";
     data.forEach(pj => {
-        html += '<div class="col-md-4" >'
+        html += '<div class="col-lg-6" >'
         html += '<div class="card text-white text-center bg-secondary mb-3" style="width: 18rem;">';
         html += `<img src="${pj.image}" class="card-img-top" alt="Rick">`;
         html += '<div class="card-body">';
@@ -38,17 +38,9 @@ const dibujarData = (data) =>{
 
 //Paginación
 const paginacion = (data) =>{
-    let html = `<li class="page-item ${
-        data.prev ? "" : "disabled"
-    }"><a class="page-link" onclick="getData('${
-        data.prev
-    }')">Prev</<a></li> 
-    
-    <li class="page-item ${
-        data.next ? "" : "disabled"
-    }"><a class="page-link" onclick="getData('${
-        data.next
-    }')">Next</<a></li>`;
+    let html = ""
+    html += `<li class="page-item ${data.prev ? "" : "disabled"}"><a class="page-link" onclick="getData('${data.prev}')">Prev</<a></li>`
+    html += `<li class="page-item ${data.next ? "" : "disabled"}"><a class="page-link" onclick="getData('${data.next}')">Next</<a></li>`;
 
     document.getElementById("paginacion").innerHTML = html;
 };
